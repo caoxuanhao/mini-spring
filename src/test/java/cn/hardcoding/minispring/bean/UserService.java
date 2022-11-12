@@ -8,7 +8,24 @@ package cn.hardcoding.minispring.bean;
  */
 public class UserService {
 
+    private String name;
+
+    public UserService() {
+
+    }
+
+    public UserService(String name) {
+        this.name = name;
+    }
+
     public void sayHi() {
         System.out.println("Hi !");
+    }
+
+    @Override
+    public String toString() {
+        return "UserService{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * @ClassName DefaultSingletonBeanRegistry
- * @Description TODO
+ * @Description 默认单例对象注册表
  * @Date 2022/11/12 17:46
  * @Author caoxuanhao
  */
