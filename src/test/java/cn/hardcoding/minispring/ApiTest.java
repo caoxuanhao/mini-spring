@@ -2,6 +2,8 @@ package cn.hardcoding.minispring;
 
 import cn.hardcoding.minispring.bean.UserDao;
 import cn.hardcoding.minispring.bean.UserService;
+import cn.hardcoding.minispring.beans.PropertyValue;
+import cn.hardcoding.minispring.beans.PropertyValues;
 import cn.hardcoding.minispring.beans.factory.config.BeanDefinition;
 import cn.hardcoding.minispring.beans.factory.config.BeanReference;
 import cn.hardcoding.minispring.beans.factory.support.DefaultListableBeanFactory;

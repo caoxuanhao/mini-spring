@@ -1,8 +1,8 @@
-package cn.hardcoding.minispring;
+package cn.hardcoding.minispring.beans;
 
 /**
  * @ClassName PropertyValue
- * @Description 属性信息
+ * @Description Bean依赖的属性信息，数据模型
  * @Date 2022/11/13 12:49
  * @Author caoxuanhao
  */

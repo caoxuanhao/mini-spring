@@ -1,6 +1,6 @@
 package cn.hardcoding.minispring.beans.factory.config;
 
-import cn.hardcoding.minispring.PropertyValues;
+import cn.hardcoding.minispring.beans.PropertyValues;
 
 /**
  * @ClassName BeanDefinition

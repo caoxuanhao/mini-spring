@@ -1,4 +1,4 @@
-package cn.hardcoding.minispring;
+package cn.hardcoding.minispring.beans;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +22,9 @@ public class PropertyValues {
     }
 
     public PropertyValue getPropertyValue(String propertyName) {
-        for (PropertyValue propertyValue : this.propertyValueList) {
-            if (propertyValue.getName().equals(propertyName)) {
-                return propertyValue;
+        for (PropertyValue pv : this.propertyValueList) {
+            if (pv.getName().equals(propertyName)) {
+                return pv;
             }
         }
         return null;

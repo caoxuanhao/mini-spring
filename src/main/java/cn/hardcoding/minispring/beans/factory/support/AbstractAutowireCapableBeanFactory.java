@@ -1,11 +1,11 @@
 package cn.hardcoding.minispring.beans.factory.support;
 
-import cn.hardcoding.minispring.PropertyValue;
-import cn.hardcoding.minispring.PropertyValues;
+import cn.hardcoding.minispring.beans.PropertyValue;
+import cn.hardcoding.minispring.beans.PropertyValues;
 import cn.hardcoding.minispring.beans.BeansException;
 import cn.hardcoding.minispring.beans.factory.config.BeanDefinition;
 import cn.hardcoding.minispring.beans.factory.config.BeanReference;
-import cn.hardcoding.minispring.beans.factory.utils.BeanUtil;
+import cn.hutool.core.bean.BeanUtil;
 
 import java.lang.reflect.Constructor;
 
