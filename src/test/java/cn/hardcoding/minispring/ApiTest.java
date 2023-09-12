@@ -8,9 +8,16 @@ import cn.hardcoding.minispring.beans.factory.config.BeanDefinition;
 import cn.hardcoding.minispring.beans.factory.config.BeanReference;
 import cn.hardcoding.minispring.beans.factory.support.DefaultListableBeanFactory;
 import cn.hardcoding.minispring.beans.factory.support.SimpleInstantiationStrategy;
+import cn.hardcoding.minispring.beans.factory.xml.XmlBeanDefinitionReader;
+import cn.hardcoding.minispring.core.io.DefaultResourceLoader;
+import cn.hardcoding.minispring.core.io.Resource;
+import cn.hutool.core.io.IoUtil;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * @ClassName ApiTest
@@ -26,8 +33,24 @@ public class ApiTest {
     @Before
     public void registerBean() {
         beanFactory = new DefaultListableBeanFactory();
-        BeanDefinition beanDefinition = new BeanDefinition(UserService.class);
-        beanFactory.registerBeanDefinition(beanName, beanDefinition);
+
+        XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
+        reader.loadBeanDefinitions("classpath:spring.xml");
+    }
+
+    @Test
+    public void test_classpath() throws IOException {
+        Resource resource = new DefaultResourceLoader().getResource("classpath:important.properties");
+        InputStream inputStream = resource.getInputStream();
+        String content = IoUtil.readUtf8(inputStream);
+        System.out.println(content);
+    }
+
+    @Test
+    public void testLoadBDFromXML(){
+        UserService userService = beanFactory.getBean("userService", UserService.class);
+        String name = userService.queryUserName("10002");
+        System.out.println(name);
     }
 
     @Test
